@@ -68,7 +68,39 @@ namespace ED2_LAB4_3.Models
             asign_prefix(root, "");
             return prefixes;
         }
+        int BiToDe(string prefix)
+        {
+            char[] prefix_array = prefix.ToCharArray();
+            Array.Reverse(prefix_array);
+            int decimal_ = 0;
+            for (int i = 0; i < prefix_array.Length; i++)
+            {
+                if (prefix[i] == '1')
+                {
+                    decimal_ += (int)Math.Pow(2, i);
+                }
+            }
+            return decimal_;
+        }
+        string DeToBi(string decimal_)
+        {
+            string prefix = "";
+            int n = Convert.ToInt32(decimal_);
+            while (n > 0)
+            {
+                if (n % 2 != 0)
+                {
+                    prefix = "1" + prefix;
+                }
+                else
+                {
+                    prefix = "0" + prefix;
+                }
+                n = (n / 2);
+            }
 
+            return prefix;
+        }
         public byte[] codification(byte[] decodification, int length)
         {
             //8 bits juntos.
@@ -82,7 +114,7 @@ namespace ED2_LAB4_3.Models
                 //Guarda bits.
                 if(chain.Length == 8)
                 {
-                    codification_[position] = Convert.ToByte(binarioADecimal(chain));
+                    codification_[position] = Convert.ToByte(BiToDe(chain));
                     position++;
                     chain = "";
                 }
@@ -95,7 +127,7 @@ namespace ED2_LAB4_3.Models
                     {
                         chain_ += chain[x];
                     }
-                    codification_[position] = Convert.ToByte(binarioADecimal(chain_));
+                    codification_[position] = Convert.ToByte(BiToDe(chain_));
                     position++;
                     chain_ = "";
                     for (int y = 8; y < chain.Length; y++)
@@ -115,7 +147,7 @@ namespace ED2_LAB4_3.Models
                         chain += "0";
                     }
                     chain += chain_a;
-                    codification_[position] = Convert.ToByte(binarioADecimal(chain_a));
+                    codification_[position] = Convert.ToByte(BiToDe(chain_a));
                     position++;
                 }
             }
