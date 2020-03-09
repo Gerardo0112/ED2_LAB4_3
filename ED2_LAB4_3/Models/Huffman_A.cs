@@ -68,5 +68,58 @@ namespace ED2_LAB4_3.Models
             asign_prefix(root, "");
             return prefixes;
         }
+
+        public byte[] codification(byte[] decodification, int length)
+        {
+            //8 bits juntos.
+            byte[] codification_ = new byte[length];
+            string chain = "";
+            int position = 0;
+
+            for(int i = 0; i < decodification.Length && i < length; i++)
+            {
+                chain += prefixes[decodification[i]];
+                //Guarda bits.
+                if(chain.Length == 8)
+                {
+                    codification_[position] = Convert.ToByte(binarioADecimal(chain));
+                    position++;
+                    chain = "";
+                }
+                //Si supera, deja los restantes.
+                else if (chain.Length > 8)
+                {
+                    //Almacena el prefijo.
+                    string chain_ = "";
+                    for (int x = 0; x < 8; x++)
+                    {
+                        chain_ += chain[x];
+                    }
+                    codification_[position] = Convert.ToByte(binarioADecimal(chain_));
+                    position++;
+                    chain_ = "";
+                    for (int y = 8; y < chain.Length; y++)
+                    {
+                        chain_ += chain[y];
+                    }
+                    chain = chain_;
+
+                }
+                //Añade ceros.
+                else if (i == decodification.Length - 1)
+                {
+                    string chain_a = chain;
+                    chain = "";
+                    for (int z = 0; z < 8 - chain_a.Length; z++)
+                    {
+                        chain += "0";
+                    }
+                    chain += chain_a;
+                    codification_[position] = Convert.ToByte(binarioADecimal(chain_a));
+                    position++;
+                }
+            }
+            return codification_;
+        }
     }
 }
