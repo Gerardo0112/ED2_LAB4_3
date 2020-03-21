@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\ED2_LAB4_3_PARTE2\\ED2_LAB4_3_PARTE2.csproj": {}
+    "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\LZW\\LZW.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\ED2_LAB4_3_PARTE2\\ED2_LAB4_3_PARTE2.csproj": {
+    "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\LZW\\LZW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\ED2_LAB4_3_PARTE2\\ED2_LAB4_3_PARTE2.csproj",
-        "projectName": "ED2_LAB4_3_PARTE2",
-        "projectPath": "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\ED2_LAB4_3_PARTE2\\ED2_LAB4_3_PARTE2.csproj",
+        "projectUniqueName": "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\LZW\\LZW.csproj",
+        "projectName": "LZW",
+        "projectPath": "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\LZW\\LZW.csproj",
         "packagesPath": "C:\\Users\\Gerardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\ED2_LAB4_3_PARTE2\\obj\\",
+        "outputPath": "C:\\Users\\Gerardo\\Desktop\\Gerardo\\URL\\5to Ciclo\\Estructura de Datos II\\ED2_LAB4_3\\LZW\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
